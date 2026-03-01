@@ -1,0 +1,59 @@
+*{
+    margin: 0;              /* remova o margin global de 20px */
+}
+
+body{
+    background-color: black;
+}
+
+h1, h3{
+    margin: 10px;
+    color: aliceblue;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.mom{
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 90px;
+    width: 1100px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.linha-cima{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+/* linha de baixo (3 imagens centralizadas) */
+.linha-baixo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    width: 75%;
+    margin: auto;
+}
+
+.pedra, .enigma, .morte, .secreta, .fogo, .fenix, .prisao{
+    width: 200px;
+    margin: 0;                 /* remove margin grande */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.pedra:hover, .enigma:hover, .morte:hover, .secreta:hover, .fogo:hover, .fenix:hover, .prisao:hover{
+    transform: scale(1.50);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.pedra:active, .enigma:active, .morte:active, .secreta:active, .fogo:active, .fenix:active, .prisao:active{
+    transform: scale(1.40);
+}
